@@ -1,4 +1,5 @@
 package alper.springframework.spring5webapp.domain;
+import java.util.HashSet;
 import  java.util.Set;
 
 import javax.persistence.Entity;
@@ -15,16 +16,16 @@ public class Author {
 	private String firstName;
 	private String lastName;
 	@ManyToMany(mappedBy = "authors")
-	private Set<Book> book;
+	private Set<Book> book = new HashSet<Book>();
 	
 	public Author() {
 	}
 
-	public Author(String firstName, String lastName, Set<Book> book) {
+	public Author(String firstName, String lastName) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.book = book;
+	
 	}
 
 	public String getFirstName() {
