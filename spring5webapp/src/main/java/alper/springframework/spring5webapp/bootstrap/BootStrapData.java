@@ -1,4 +1,6 @@
 package alper.springframework.spring5webapp.bootstrap;
+import alper.springframework.spring5webapp.domain.Publisher;
+import alper.springframework.spring5webapp.repositories.PublisherRepository;
 import  org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
